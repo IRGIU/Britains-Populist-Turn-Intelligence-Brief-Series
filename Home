@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligence Brief - Britain's Populist Turn</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: #000;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 40px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            border-left: 3px solid #fff;
+            padding-left: 20px;
+            margin-bottom: 60px;
+            animation: slideIn 0.8s ease-out;
+        }
+
+        .org-name {
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            opacity: 0.7;
+            margin-bottom: 10px;
+        }
+
+        .doc-type {
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: 0.5;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 300;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .divider {
+            width: 60px;
+            height: 2px;
+            background: #fff;
+            margin: 40px 0;
+            animation: expandWidth 1s ease-out 0.3s both;
+        }
+
+        .disclaimer-section {
+            flex: 1;
+            animation: fadeIn 1s ease-out 0.5s both;
+        }
+
+        .disclaimer-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        .disclaimer-content {
+            font-size: 11px;
+            line-height: 1.8;
+            opacity: 0.8;
+            max-width: 900px;
+        }
+
+        .disclaimer-content h3 {
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .disclaimer-content p {
+            margin-bottom: 15px;
+        }
+
+        .footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11px;
+            opacity: 0.6;
+            animation: fadeIn 1s ease-out 0.7s both;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes expandWidth {
+            from {
+                width: 0;
+            }
+            to {
+                width: 60px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .footer {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="org-name">CANVI – IRGIU</div>
+            <div class="doc-type">Intelligence Brief</div>
+            <h1>Britain's Populist Turn:<br>Immigration, Identity, and<br>the Future of Democracy</h1>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="disclaimer-section">
+            <div class="disclaimer-title">DISCLAIMER</div>
+            <div class="disclaimer-content">
+                <p>This document, produced by the International Relations and Geopolitical Intelligence Unit (IRGIU) of CANVI, is for informational purposes only, intended for use by CANVI and authorised entities. The content is derived from a global network of government and ex-government officials, military and ex-military personnel, intelligence, diplomats, corporations, companies, and other confidential sources. A portion of the information contained herein is based on human intelligence (HUMINT) gathered through CANVI's internal networks, including individuals linked to intelligence agencies, governments, and other institutions. Such information, by its nature, may not be independently verifiable. Accordingly, this material should be treated as indicative, not definitive. This document is a summarised excerpt from our comprehensive internal data vault. It is not for general distribution and should not be seen as an official stance of CANVI.</p>
+
+                <h3>Intellectual Property Rights</h3>
+                <p>All content, including but not limited to analyses, scenarios, data, and methodologies, is the intellectual property of CANVI. Unauthorized use, duplication, or distribution of any material from this document is strictly prohibited and may be subject to legal action.</p>
+
+                <h3>Accuracy and Reliability</h3>
+                <p>The IRGIU of CANVI has made every effort to ensure that the information and analysis provided in this document are accurate and based on reliable sources. However, the IRGIU does not guarantee the accuracy, completeness, or timeliness of the information. Certain insights are drawn from HUMINT sources, which, while valuable, may not always be verifiable. The scenarios and analyses are based on a combination of historical data, HUMINT, current affairs, and speculative projections; they are intended for strategic contemplation and should not be interpreted as definitive forecasts.</p>
+
+                <h3>No Investment or Policy Advice</h3>
+                <p>This document does not constitute investment, policy, legal, or any other form of professional advice. It should not be used as the sole basis for making significant policy decisions, investments, or other important resolutions. CANVI and the IRGIU are not responsible for any actions taken based on the information provided in this document.</p>
+
+                <h3>Limitation of Liability</h3>
+                <p>CANVI and the IRGIU shall not be liable for any direct, indirect, incidental, or consequential damages resulting from the use of, or reliance on, the information contained in this document. This includes, but is not limited to, loss of profit, business interruption, or any other financial or non-financial losses.</p>
+
+                <h3>External Sources</h3>
+                <p>Information derived from external sources is credited appropriately within the document. However, the IRGIU is not responsible for the content or accuracy of these external sources.</p>
+
+                <h3>Changes and Updates</h3>
+                <p>The information and scenarios presented in this document are subject to change without notice. The IRGIU reserves the right to update or modify the content based on new information, HUMINT inputs, changing circumstances, or for any other reason deemed necessary.</p>
+
+                <h3>Confidentiality</h3>
+                <p>This document contains sensitive and confidential information. Recipients are obligated to maintain the confidentiality of the information and to use it solely for the purposes intended by CANVI.</p>
+
+                <h3>Jurisdiction and Applicable Law</h3>
+                <p>Any disputes or claims arising out of or in connection with this disclaimer shall be governed by and construed in accordance with the laws of the jurisdiction in which CANVI is head quartered.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div>© 2025 International Relations and Geopolitical Intelligence Unit (IRGIU) of CANVI. All rights reserved.</div>
+            <div>CONFIDENTIAL</div>
+        </div>
+    </div>
+</body>
+</html>
