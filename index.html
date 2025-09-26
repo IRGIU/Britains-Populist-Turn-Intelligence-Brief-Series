@@ -114,8 +114,8 @@
             position: fixed;
             bottom: 40px;
             right: 40px;
-            background: #fff;
-            color: #000;
+            background: rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.4);
             padding: 16px 28px;
             text-decoration: none;
             font-size: 12px;
@@ -124,25 +124,33 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            cursor: not-allowed;
+            transition: all 0.4s ease;
             animation: fadeIn 1s ease-out 1s both;
             z-index: 1000;
         }
 
-        .contents-btn:hover {
+        .contents-btn.active {
+            background: #fff;
+            color: #000;
+            border-color: #fff;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .contents-btn.active:hover {
             background: #000;
             color: #fff;
             transform: translateX(5px);
             box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
         }
 
-        .contents-btn svg {
+        .contents-btn.active svg {
             transition: transform 0.3s ease;
         }
 
-        .contents-btn:hover svg {
+        .contents-btn.active:hover svg {
             transform: translateX(5px);
         }
 
@@ -212,16 +220,16 @@
         <div class="disclaimer-section">
             <div class="disclaimer-title">DISCLAIMER</div>
             <div class="disclaimer-content">
-                <p>The content and information on this site, produced by the International Relations and Geopolitical Intelligence Unit (IRGIU) of CANVI, is for informational purposes only, intended for use by CANVI and authorised entities. The content is derived from a global network of government and ex-government officials, military and ex-military personnel, intelligence, diplomats, corporations, companies, and other confidential sources. A portion of the information contained herein is based on human intelligence (HUMINT) gathered through CANVI's internal networks, including individuals linked to intelligence agencies, governments, and other institutions. Such information, by its nature, may not be independently verifiable. Accordingly, this material should be treated as indicative, not definitive. the content and information on this site is a summarised excerpt from our comprehensive internal data vault. It is not for general distribution and should not be seen as an official stance of CANVI.</p>
+                <p>The content and information on this site, produced by the International Relations and Geopolitical Intelligence Unit (IRGIU) of CANVI, is for informational purposes only, intended for use by CANVI and authorised entities. The content is derived from a global network of government and ex-government officials, military and ex-military personnel, intelligence, diplomats, corporations, companies, and other confidential sources. A portion of the information contained herein is based on human intelligence (HUMINT) gathered through CANVI's internal networks, including individuals linked to intelligence agencies, governments, and other institutions. Such information, by its nature, may not be independently verifiable. Accordingly, this material should be treated as indicative, not definitive. The content and information on this site is a summarised excerpt from our comprehensive internal data vault. It is not for general distribution and should not be seen as an official stance of CANVI.</p>
 
                 <h3>Intellectual Property Rights</h3>
                 <p>All content, including but not limited to analyses, scenarios, data, and methodologies, is the intellectual property of CANVI. Unauthorized use, duplication, or distribution of any material from this site is strictly prohibited and may be subject to legal action.</p>
 
                 <h3>Accuracy and Reliability</h3>
-                <p>The IRGIU of CANVI has made every effort to ensure that the information and analysis provided in site are accurate and based on reliable sources. However, the IRGIU does not guarantee the accuracy, completeness, or timeliness of the information. Certain insights are drawn from HUMINT sources, which, while valuable, may not always be verifiable. The scenarios and analyses are based on a combination of historical data, HUMINT, current affairs, and speculative projections; they are intended for strategic contemplation and should not be interpreted as definitive forecasts.</p>
+                <p>The IRGIU of CANVI has made every effort to ensure that the information and analysis provided on this site are accurate and based on reliable sources. However, the IRGIU does not guarantee the accuracy, completeness, or timeliness of the information. Certain insights are drawn from HUMINT sources, which, while valuable, may not always be verifiable. The scenarios and analyses are based on a combination of historical data, HUMINT, current affairs, and speculative projections; they are intended for strategic contemplation and should not be interpreted as definitive forecasts.</p>
 
                 <h3>No Investment or Policy Advice</h3>
-                <p>The content and information on this site does not constitute investment, policy, legal, or any other form of professional advice. It should not be used as the sole basis for making significant policy decisions, investments, or other important resolutions. CANVI and the IRGIU are not responsible for any actions taken based on the information provided on this site.</p>
+                <p>The content and information on this site does not constitute investment, policy, legal, or any other form of professional advice. It should not be used as the sole basis for making significant policy decisions, investments, or other important resolutions. CANVI and the IRGIU are not responsible for any actions taken based on the information provided in this site.</p>
 
                 <h3>Limitation of Liability</h3>
                 <p>CANVI and the IRGIU shall not be liable for any direct, indirect, incidental, or consequential damages resulting from the use of, or reliance on, the information contained on this site. This includes, but is not limited to, loss of profit, business interruption, or any other financial or non-financial losses.</p>
@@ -245,12 +253,28 @@
             <div>CONFIDENTIAL</div>
         </div>
 
-        <a href="https://irgiu.github.io/Contents-Page/" class="contents-btn">
+        <a href="https://irgiu.github.io/Contents-Page/" class="contents-btn" id="contentsBtn">
             <span>PROCEED TO CONTENTS</span>
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
         </a>
     </div>
+
+    <script>
+        // Activate button when user scrolls near bottom
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.scrollY + window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+            const button = document.getElementById('contentsBtn');
+            
+            // Activate when within 100px of bottom
+            if (scrollPosition >= documentHeight - 100) {
+                button.classList.add('active');
+            } else {
+                button.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
